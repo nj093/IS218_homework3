@@ -13,10 +13,9 @@ class Calculation:
     def create(a: Decimal, b: Decimal, operation: Callable[[Decimal, Decimal], Decimal]):
         return Calculation(a, b, operation)
     
-
     def perform(self) -> Decimal:
         return self.operation(self.a, self.b)
     
-    @classmethod
+
     def __repr__(self):
         return f"Calculation({self.a}, {self.b} {self.operation.__name__})"
